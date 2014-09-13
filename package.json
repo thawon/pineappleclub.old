@@ -1,6 +1,6 @@
 {
 	"name": "pineapple-club",
-	"description": "Pineapple Club website"
+	"description": "Pineapple Club website",
 	"version": "0.0.1",
 	"dependencies": {
 		"express": "4.x.x",
@@ -20,5 +20,5 @@
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/thawon/pineappleclub.git"
-  }
+	}
 }
