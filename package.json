@@ -3,7 +3,6 @@
 	"version": "0.0.1",
 	"dependencies": {
 		"express": "4.x.x",
-		"body-parser": "1.x.x",
-		"karma": "~0.12.23"
+		"body-parser": "1.x.x"
 	}
 }
