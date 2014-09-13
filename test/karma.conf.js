@@ -17,11 +17,13 @@ module.exports = function(config) {
     frameworks: ["jasmine", "requirejs"],
 
     // list of files / patterns to load in the browser
-    files: [       
-       {pattern: "app/scripts/**/*.js", included: false},
-       {pattern: "test/specs/**/*spec.js", included: false},       
+    files: [
+        { pattern: "app/scripts/**/*.js", included: false },
+        { pattern: "test/specs/**/*spec.js", included: false },
 
-       "test/specs/test-main.js"
+        { pattern: "test/specs/mocks/*.js", included: true },       
+
+        "test/specs/test-main.js"
     ],
 
     // list of files / patterns to exclude
@@ -39,16 +41,16 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [
-      "PhantomJS"
-      //"Chrome"
+        "PhantomJS"
+        //"Chrome"
     ],
 
     // Which plugins to enable
     plugins: [
-      "karma-phantomjs-launcher",
-      "karma-chrome-launcher",
-      "karma-jasmine",
-      "karma-requirejs",
+        "karma-phantomjs-launcher",
+        "karma-chrome-launcher",
+        "karma-jasmine",
+        "karma-requirejs",
     ],
 
     // Continuous Integration mode

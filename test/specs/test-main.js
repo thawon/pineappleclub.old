@@ -14,7 +14,11 @@ requirejs.config({
         jquery: "app/scripts/vendors/jquery",
         domReady: "app/scripts/vendors/domReady",
         app: "app/scripts/app",
-        controllers: "app/scripts/controllers"        
+        controllers: "app/scripts/controllers",
+
+        /* mocks */
+        routeMock: "test/specs/mocks/route-mock",
+        dependencyResolverMock: "test/specs/mocks/dependency-resolver-service-mock"
     },
 
     shim: {
@@ -23,15 +27,21 @@ requirejs.config({
             exports: "angular"
         },
         angularMocks:
-        { 
+        {
             deps: ["angular"]
         },
         angular: {
             deps: ["jquery"],
             exports: "angular"
         }
-        
-    },    
+    },
+
+    map: {
+        app: {
+            route: "routeMock",
+            dependencyResolver: "dependencyResolverMock"
+        }
+    },
 
     // ask Require.js to load these files (all our tests)
     deps: tests,

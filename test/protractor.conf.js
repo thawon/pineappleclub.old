@@ -14,5 +14,5 @@ exports.config = {
     // The path of the test files must be relative to the config file.
     specs: ["e2e/*.js"],
 
-    singleRun: true
+    singleRun: false
 }
