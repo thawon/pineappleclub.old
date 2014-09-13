@@ -4,7 +4,7 @@
 	"dependencies": {
 		"express": "4.x.x",
 		"body-parser": "1.x.x",
-		"socket.io": "x.x.x"
+		"mongodb": "x.x.x"
 	},
 	"devDependencies": {
 		"karma": "~0.12.23",
