@@ -1,8 +1,10 @@
-﻿{
-  "name": "pineapple-club",
-  "version": "0.0.2",
-  "dependencies": {
-    "express": "4.x.x",
-	"body-parser": "1.x.x"
-  }
+{
+	"name": "fluid",
+	"version": "0.0.1",
+	"dependencies": {
+		"express": "3.x.x",
+		"consolidate": "0.x.x",
+		"ejs": "x.x.x",
+		"requirejs": "x.x.x"
+	}
 }
