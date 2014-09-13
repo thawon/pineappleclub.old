@@ -1,12 +1,6 @@
-﻿var express = require("express"),
-    app = express(),
-    bodyParser = require("body-parser");
-
-app.set("port", process.env.PORT || 3000);
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + "/app"));
-
-app.listen(app.get("port"), function () {
-    console.log("Now serving the app at http://localhost:3000");
-});
+﻿var http = require('http')
+var port = process.env.PORT || 1337;
+http.createServer(function (req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello World\n');
+}).listen(port);
