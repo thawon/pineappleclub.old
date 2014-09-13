@@ -1,37 +1,37 @@
 var tests = Object.keys(window.__karma__.files).filter(function (file) {
     // run tests - only files ending with "Spec.js"
-    return /Spec\.js$/.test(file);
+    return /spec\.js$/.test(file);
 });
 
 requirejs.config({
-    // Karma serves files from '/base'
-    baseUrl: '/base',
+    // Karma serves files from "/base"
+    baseUrl: "/base",
 
     paths: {
-        angular: 'app/scripts/vendors/angular.min',
-        angularMocks: 'app/scripts/vendors/angular-mocks',
-        ngResource: 'app/scripts/vendors/angular-resource.min',
-        jquery: 'app/scripts/vendors/jquery',
-        domReady: 'app/scripts/vendors/domReady',
-        app: 'app/scripts/app',
-        controllers: 'app/scripts/controllers/controllers'
+        angular: "app/scripts/vendors/angular.min",
+        angularMocks: "app/scripts/vendors/angular-mocks",
+        ngResource: "app/scripts/vendors/angular-resource.min",
+        jquery: "app/scripts/vendors/jquery",
+        domReady: "app/scripts/vendors/domReady",
+        app: "app/scripts/app",
+        controllers: "app/scripts/controllers"        
     },
 
     shim: {
         ngResource: {
-            deps: ['angular'],
-            exports: 'angular'
+            deps: ["angular"],
+            exports: "angular"
         },
         angularMocks:
         { 
-            deps: ['angular']
+            deps: ["angular"]
         },
         angular: {
-            deps: ['jquery'],
-            exports: 'angular'
+            deps: ["jquery"],
+            exports: "angular"
         }
         
-    },
+    },    
 
     // ask Require.js to load these files (all our tests)
     deps: tests,

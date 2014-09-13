@@ -17,10 +17,9 @@ module.exports = function(config) {
     frameworks: ["jasmine", "requirejs"],
 
     // list of files / patterns to load in the browser
-    files: [
-       //{pattern: "app/scripts/vendors/*.js", included: false},              
+    files: [       
        {pattern: "app/scripts/**/*.js", included: false},
-       {pattern: "test/specs/**/*Spec.js", included: false},
+       {pattern: "test/specs/**/*spec.js", included: false},       
 
        "test/specs/test-main.js"
     ],
