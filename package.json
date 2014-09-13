@@ -4,6 +4,6 @@
 	"dependencies": {
 		"express": "4.x.x",
 		"body-parser": "1.x.x",
-		"requirejs": "x.x.x"
+		"karma": "~0.12.23"
 	}
 }
