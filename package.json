@@ -1,10 +1,10 @@
 {
 	"name": "pineapple-club",
+	"description": "Pineapple Club website"
 	"version": "0.0.1",
 	"dependencies": {
 		"express": "4.x.x",
-		"body-parser": "1.x.x",
-		"mongodb": "x.x.x"
+		"body-parser": "1.x.x"
 	},
 	"devDependencies": {
 		"karma": "~0.12.23",
@@ -16,5 +16,9 @@
 		"grunt": "~0.4.5",
 		"grunt-contrib-less": "~0.11.0",
 		"grunt-contrib-watch": "~0.6.1"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/thawon/pineappleclub.git"
+  }
 }
