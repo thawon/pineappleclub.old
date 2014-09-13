@@ -3,7 +3,8 @@
 	"version": "0.0.1",
 	"dependencies": {
 		"express": "4.x.x",
-		"body-parser": "1.x.x"
+		"body-parser": "1.x.x",
+		"socket.io": "x.x.x"
 	},
 	"devDependencies": {
 		"karma": "~0.12.23",
