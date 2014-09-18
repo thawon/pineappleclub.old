@@ -1,18 +1,20 @@
-﻿<div>
+﻿<!-- cn = contact -->
+<div ng-controller="ContactController">
     <div class="col-lg-4">
-        <h2>
-            Contact Us</h2>
+        
+        <h2>Contact Us</h2>
+
         <table>
             <tbody>
             <tr>
-                <td rowspan="2" style="width:80px;">
+                <td id="cn_image_td" rowspan="2">
                     <img src="/images/phone.png"  alt="phone"/>
                 </td>
-                <td style="width:60px;"> 
-                    Tel:                  
+                <td id="cn_phone_td"> 
+                    Phone:                  
                 </td>
                 <td>    
-                    02 8976 7808               
+                    <span ng-bind="companyInfo.contact.phone"></span>
                 </td>
             </tr>
             <tr>
@@ -20,18 +22,18 @@
                     Mobile:                  
                 </td>
                 <td>    
-                    02 8976 7808               
+                    <span ng-bind="companyInfo.contact.mobile"></span>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <img src="/images/email.png"  alt="phone"/>
+                    <img src="/images/email.png"  alt="email"/>
                 </td>
                 <td>
                     Email:
                 </td>
                 <td>
-                    blah@pineappleclub.com.au
+                    <span ng-bind="companyInfo.contact.email"></span>
                 </td>
             </tr>
             </tbody>

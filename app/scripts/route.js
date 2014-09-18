@@ -7,7 +7,8 @@
                 "/": {
                     templateUrl: "views/home.html",
                     dependencies: [
-                        "controllers/home-controller"
+                        "controllers/home-controller",
+                        "controllers/contact-controller"
                     ]
                 }
             }

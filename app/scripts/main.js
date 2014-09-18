@@ -28,6 +28,7 @@ require(
         "angular",
         "app",
         "controllers/navigator-controller",
+        "controllers/header-controller",
         "controllers/footer-controller"
     ],
     function (angular, app) {
