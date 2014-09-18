@@ -9,17 +9,33 @@
 
     <!-- Bootstrap -->  
     <link href="styles/custom-bootstrap.css" rel="stylesheet">
+    <link href="styles/offcanvas.css" rel="stylesheet">
 </head>
 <body>	
-    <div class="container">
+    <div class="container">        
         <div ng-include="'/views/navigator.html'"></div>
 
-        <div ng-include="'/views/header.html'"></div>
+        <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-12">
+                <div ng-include="'/views/header.html'"></div>
 
-        <!-- main view -->
-        <div ng-view></div>
+                <!-- main view -->
+                <div ng-view></div>
+            </div>
+
+            <div id="test_div" class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+              <div class="list-group">
+                <a href="#" class="list-group-item active">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+              </div>
+            </div>
+        </div>
     </div>
     
+    <!--<button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>-->
+
     <div ng-include="'/views/footer.html'"></div>
 
     <div class="device-xs visible-xs"></div>
