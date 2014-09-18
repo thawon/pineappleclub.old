@@ -6,7 +6,7 @@
                 var configuration = {};
 
                 configuration.project = {
-                    name: "Pineapple Club FDC"
+                    name: "Pineapple Club Family Day Care"
                 };
 
                 configuration.companyInfo = {
