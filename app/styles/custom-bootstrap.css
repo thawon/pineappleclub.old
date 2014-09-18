@@ -6180,6 +6180,9 @@ button.close {
   padding-top: 15px;
   background-color: #f1f1f1;
 }
+#hm_integricare_div {
+  margin-top: 30px;
+}
 #cn_image_td {
   width: 80px;
 }
