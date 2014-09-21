@@ -19,14 +19,9 @@ requirejs.config({
 
         /* infrastructures */
         infrastructures: "app/scripts/infrastructures",
-
         controllerFactory: "app/scripts/infrastructures/controller-factory",
         constants: "app/scripts/infrastructures/constants",
-        utility: "app/scripts/infrastructures/utility",
-
-        /* mocks */
-        routeMock: "test/specs/mocks/route-mock",
-        dependencyResolverMock: "test/specs/mocks/dependency-resolver-service-mock"
+        utility: "app/scripts/infrastructures/utility"
     },
 
     shim: {
@@ -52,7 +47,7 @@ requirejs.config({
             route: "routeMock",
             dependencyResolver: "dependencyResolverMock"
         },
-        "controllers/header-controller": {
+        controllers: {
             "services/device-service": "DeviceServiceMock",
             "services/export-service": "ExportServiceMock"
         }

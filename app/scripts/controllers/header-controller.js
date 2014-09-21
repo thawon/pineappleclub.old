@@ -1,6 +1,8 @@
 ﻿define(
     ["controllerFactory", "constants", "services/device-service", "services/export-service"],
     function (factory, constants) {
+        "use strict";
+
         factory.create({
             name: "HeaderController",
             configs: {

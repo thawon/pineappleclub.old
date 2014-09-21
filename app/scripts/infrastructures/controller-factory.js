@@ -8,7 +8,7 @@
                 this.init.apply(this, arguments);
             },
             keys = ["name", "controller", "dependencies", "elements", "configs"],
-            elements, configs;
+            elements, configs, controller;
 
             function getExtendedKeys(obj) {
                 var result = {};
@@ -26,12 +26,12 @@
 
             Controller.prototype.init = function (params) {
                 var name = params.name,
-                    controller = params.controller,
                     dependencies = params.dependencies,
                     extend = getExtendedKeys(params);
 
                 elements = params.elements;
                 configs = params.configs;
+                controller = params.controller;
 
                 this.include(extend);
 
@@ -48,7 +48,7 @@
             }
 
             Controller.prototype.registerDependencies = function (arguments) {
-                var params = utility.getParamNames(arguments.callee),
+                var params = utility.getParamNames(controller),
                     length = params.length;
 
                 for (var i = 0; i < length; i++) {
