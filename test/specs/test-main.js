@@ -11,10 +11,18 @@ requirejs.config({
         angular: "app/scripts/vendors/angular.min",
         angularMocks: "app/scripts/vendors/angular-mocks",
         ngResource: "app/scripts/vendors/angular-resource.min",
+        underscore: "app/scripts/vendors/underscore-min",
         jquery: "app/scripts/vendors/jquery",
         domReady: "app/scripts/vendors/domReady",
         app: "app/scripts/app",
         controllers: "app/scripts/controllers",
+
+        /* infrastructures */
+        infrastructures: "app/scripts/infrastructures",
+
+        controllerFactory: "app/scripts/infrastructures/controller-factory",
+        constants: "app/scripts/infrastructures/constants",
+        utility: "app/scripts/infrastructures/utility",
 
         /* mocks */
         routeMock: "test/specs/mocks/route-mock",
@@ -33,6 +41,9 @@ requirejs.config({
         angular: {
             deps: ["jquery"],
             exports: "angular"
+        },
+        underscore: {
+            exports: "_"
         }
     },
 
@@ -40,6 +51,10 @@ requirejs.config({
         app: {
             route: "routeMock",
             dependencyResolver: "dependencyResolverMock"
+        },
+        "controllers/header-controller": {
+            "services/device-service": "DeviceServiceMock",
+            "services/export-service": "ExportServiceMock"
         }
     },
 

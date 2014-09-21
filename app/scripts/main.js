@@ -4,10 +4,16 @@ require.config({
         angular: "vendors/angular.min",
         ngResource: "vendors/angular-resource.min",
         jquery: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min",
+        underscore: "vendors/underscore-min",
         bootstrap: "bootstrap/js/bootstrap.min",
-
+        
         /* services */
-        dependencyResolver: "services/dependency-resolver-service"
+        dependencyResolver: "services/dependency-resolver-service",
+
+        /* infrastructures */
+        controllerFactory: "infrastructures/controller-factory",
+        utility: "infrastructures/utility",        
+        constants: "infrastructures/constants"
     },
     shim: {
         ngResource: {
@@ -19,6 +25,9 @@ require.config({
         },
         bootstrap: {
             deps: ["jquery"]
+        },
+        underscore: {
+            exports: "_"
         }
     }
 });

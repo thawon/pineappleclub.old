@@ -11,7 +11,7 @@ define(
             "$controllerProvider",
             "$compileProvider",
             "$filterProvider",
-            "$provide",
+            "$provide",            
         function ($routeProvider, $locationProvider, $controllerProvider,
                     $compileProvider, $filterProvider, $provide) {
 

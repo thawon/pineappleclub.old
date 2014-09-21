@@ -21,7 +21,7 @@ module.exports = function(config) {
         { pattern: "app/scripts/**/*.js", included: false },
         { pattern: "test/specs/**/*spec.js", included: false },
 
-        { pattern: "test/specs/mocks/*.js", included: true },       
+        { pattern: "test/specs/mocks/*.js", included: true },
 
         "test/specs/test-main.js"
     ],
@@ -41,8 +41,8 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [
-        "PhantomJS"
-        //"Chrome"
+        //"PhantomJS"
+        "Chrome"
     ],
 
     // Which plugins to enable
