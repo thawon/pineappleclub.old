@@ -38,7 +38,8 @@ require(
         "app",
         "controllers/navigator-controller",
         "controllers/header-controller",
-        "controllers/footer-controller"
+        "controllers/footer-controller",
+        "controllers/side-bar-controller"
     ],
     function (angular, app) {
         angular.bootstrap(document, ["pineappleclub"]); 
