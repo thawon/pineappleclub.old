@@ -10,6 +10,12 @@
                         "controllers/home-controller",
                         "controllers/contact-controller"
                     ]
+                },
+                "/contactus": {
+                    templateUrl: "views/contact.html",
+                    dependencies: [
+                        "controllers/contact-controller"
+                    ]
                 }
             }
         };

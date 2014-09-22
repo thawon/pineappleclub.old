@@ -1,17 +1,32 @@
 ﻿define(
-    ["controllerFactory", "constants", "services/device-service", "services/export-service"],
+    ["controllerFactory", "constants", 
+        "services/device-service", "services/export-service", "services/app-configuration-service", 
+        "services/navigator-service", "directives/device-height-directive"],
     function (factory, constants) {
         "use strict";
 
         factory.create({
-            name: "HeaderController",
-            configs: {
-                IMG_BIGBANNER: "/images/tree-big.png",
-                IMG_SMALLBANNER: "/images/tree-small.png"
+            name: "SideBarController",
+            configs: {  
+                ELE_SIDEBAR: ".row-offcanvas",
+                CONS_ACTIVE: "active",
+                CSS_SIDEBARSHOW: "side-bar-show",              
+                CSS_SIDEBARHIDE: "side-bar-hide",
             },
-            dependencies: ["$scope", "DeviceService", "$timeout", "ExportService"],
-            controller: function ($scope, device, $timeout, exports) {
+            dependencies: [
+                    "$scope", 
+                    "DeviceService", 
+                    "$timeout", 
+                    "ExportService", 
+                    "NavigatorService", 
+                    "AppConfigurationService"
+                ],
+            controller: function ($scope, device, $timeout, exports, navigator, configuration) {
                 this.initialise(arguments);
+
+                $scope.project = configuration.project;
+                $scope.menu = navigator.pages.main;
+                $scope.toggleSideBar = $.proxy(this.toggleSideBar, this);
 
                 this.resize();
 
@@ -19,17 +34,21 @@
                     $.proxy(
                         function () {
                             $timeout(
-                                $.proxy(this.resize, this)); }, this), false);
+                                $.proxy(this.resize, this));
+                        }, this), false);
             },
             resize: function () {
                 var sizes = constants.get("device-size"),
                     current = this.device.getDeviceSize();
 
                 if (current === sizes.XS) {
-                    this.$scope.banner = this.IMG_SMALLBANNER;
+                    this.$scope.isSidebarVisible = this.CSS_SIDEBARSHOW;                    
                 } else {
-                    this.$scope.banner = this.IMG_BIGBANNER;
+                    this.$scope.isSidebarVisible = this.CSS_SIDEBARHIDE;
                 }
+            },
+            toggleSideBar: function () {
+                $(this.ELE_SIDEBAR).toggleClass(this.CONS_ACTIVE);
             }
         });
     });

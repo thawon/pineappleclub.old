@@ -7,7 +7,7 @@
                     <ul class="list-no-bullet list-no-padding-left">
                         <span ng-bind="menu.about.display"></span>
                         <li ng-repeat="item in menu.about.items">
-                            <a ng-href="{{item.path}}" ng-bind="item.display"></a>
+                            <a class="footer-link" ng-href="{{item.path}}" ng-bind="item.display"></a>
                         </li>
                     </ul>
                 </div>
@@ -16,7 +16,7 @@
                     <ul class="list-no-bullet list-no-padding-left">
                         <span ng-bind="menu.social.display"></span>
                         <li ng-repeat="item in menu.social.items">
-                            <a ng-href="{{item.path}}" ng-bind="item.display"></a>
+                            <a class="footer-link" ng-href="{{item.path}}" ng-bind="item.display"></a>
                         </li>
                     </ul>
                 </div>

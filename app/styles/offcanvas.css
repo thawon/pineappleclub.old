@@ -20,6 +20,7 @@ footer {
 @media screen and (max-width: 767px) {
   .row-offcanvas {
     position: relative;
+    z-index: 1000;
     -webkit-transition: all .25s ease-out;
          -o-transition: all .25s ease-out;
             transition: all .25s ease-out;
@@ -34,8 +35,10 @@ footer {
   }
 
   .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -50%; /* 6 columns */
+  .sidebar-offcanvas 
+  {
+    /* right: -50%; 6 columns */
+    right: -90%;
   }
 
   .row-offcanvas-left
@@ -43,8 +46,10 @@ footer {
     left: -50%; /* 6 columns */
   }
 
-  .row-offcanvas-right.active {
-    right: 50%; /* 6 columns */
+  .row-offcanvas-right.active 
+  {
+    /* right: 90%; 6 columns */
+    right: 90%;
   }
 
   .row-offcanvas-left.active {
@@ -53,7 +58,9 @@ footer {
 
   .sidebar-offcanvas {
     position: absolute;
-    top: 0;
-    width: 50%; /* 6 columns */
+    top: 0;   
+     
+    /* right: 90%; 6 columns */
+    width: 90%;
   }
 }
