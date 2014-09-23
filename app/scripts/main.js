@@ -6,7 +6,8 @@ require.config({
         jquery: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min",
         underscore: "vendors/underscore-min",
         bootstrap: "bootstrap/js/bootstrap.min",
-        
+        async: "vendors/async",
+
         /* services */
         dependencyResolver: "services/dependency-resolver-service",
 
