@@ -11,11 +11,18 @@
                         "controllers/contact/contact-controller"
                     ]
                 },
+                "/photos": {
+                    templateUrl: "views/photo/photo.html",
+                    dependencies: [
+                        "controllers/photo/photo-controller"
+                    ]
+                },
                 "/contactus": {
                     templateUrl: "views/contact/contact-page.html",
                     dependencies: [
                         "controllers/contact/contact-controller",
-                        "controllers/contact/location-controller"
+                        "controllers/contact/location-controller",
+                        "directives/google-map-directive"
                     ]
                 }
             }

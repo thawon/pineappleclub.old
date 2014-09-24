@@ -1,0 +1,55 @@
+﻿<!-- ph = photo -->
+<div ng-controller="PhotoController">
+    
+    <h2>Photos</h2>
+
+    <div id="ph_photo_display_div" class="col-lg-6 col-md-6 hidden-sm hidden-xs">
+        <div id="myCarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="active item" data-slide-number="0">
+                    <img src="/images/photos/art-craft-room.jpg" class="img-responsive">
+                </div>
+                <div class="item" data-slide-number="1">
+                    <img src="/images/photos/art-craft-table.jpg" class="img-responsive">
+                </div>
+                <div class="item" data-slide-number="2">
+                    <img src="/images/photos/book-corner.jpg" class="img-responsive">
+                </div>
+
+                
+            </div>
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+        </div>
+    </div>
+
+    <div id="ph_photos_div" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div id="ph_photo_details_div" class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+            <<!--span ng-bind="name"></span>
+            <p ng-bind="description"></p>-->
+        </div>
+
+        <div id="ph_photo_navigator_div" class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+            <ul class="list-inline">
+                <li data-target="#myCarousel" data-slide-to="0"> 
+                    <a id="carousel-selector-0" class="selected">
+                        <img src="/images/photos/art-craft-room.jpg" class="img-responsive thumbnail">
+                    </a>
+                </li>
+                <li data-target="#myCarousel" data-slide-to="1"> 
+                    <a id="carousel-selector-1">
+                        <img src="/images/photos/art-craft-table.jpg" class="img-responsive thumbnail">
+                    </a>
+                </li>
+                <li data-target="#myCarousel" data-slide-to="2"> 
+                    <a id="carousel-selector-2">
+                        <img src="/images/photos/book-corner.jpg" class="img-responsive thumbnail">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+</div>

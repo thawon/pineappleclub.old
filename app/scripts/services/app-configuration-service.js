@@ -10,6 +10,10 @@
                 };
 
                 configuration.companyInfo = {
+                    location: {
+                        lat: -33.947152,
+                        lng: 151.129254
+                    },
                     contact: {
                         phone: "(02) 8041 8101",
                         mobile: "04 6625 0622",
