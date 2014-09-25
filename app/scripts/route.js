@@ -21,7 +21,6 @@
                     templateUrl: "views/contact/contact-page.html",
                     dependencies: [
                         "controllers/contact/contact-controller",
-                        "controllers/contact/location-controller",
                         "directives/google-map-directive"
                     ]
                 }

@@ -5,10 +5,10 @@
             function () {
                 var navigator = {},
                     items = {
-                        home: { name: "home", display: "Home", path: "/" },
+                        home: { name: "home", display: "Home", path: "#/" },
                         services: { name: "services", display: "Services", path: "/services" },
-                        photo: { name: "photos", display: "Photos", path: "/photos" },
-                        contact: { name: "contact", display: "Contact Us", path: "/contactus" },
+                        photo: { name: "photos", display: "Photos", path: "#/photos" },
+                        contact: { name: "contact", display: "Contact Us", path: "#/contactus" },
                         staff: { name: "staff", display: "Our Staff", path: "/staff" },
                         philosophy: { name: "philosophy", display: "Our Philosophy", path: "/philosophy" },
                         facebook: { name: "facebook", display: "Facebook", path: "" },
