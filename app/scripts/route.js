@@ -20,7 +20,7 @@
                 "/contactus": {
                     templateUrl: "views/contact/contact-page.html",
                     dependencies: [
-                        "controllers/contact/contact-controller"                        
+                        "controllers/contact/contact-controller"
                     ]
                 }
             }
