@@ -3,8 +3,13 @@
 	"description": "Pineapple Club website",
 	"version": "0.0.1",
 	"dependencies": {
-		"express": "4.x.x",
-		"body-parser": "1.x.x"
+		"express": "~4.0.0",
+		"morgan": "~1.0.0",
+		"body-parser": "~1.0.0",
+		"method-override": "~1.0.0",
+		"consolidate": "0.x.x",
+		"ejs": "x.x.x",
+		"jade": "~1.7.0"
 	},
 	"devDependencies": {
 		"karma": "~0.12.23",
@@ -15,7 +20,8 @@
 		"karma-ng-scenario": "~0.1.0",
 		"grunt": "~0.4.5",
 		"grunt-contrib-less": "~0.11.0",
-		"grunt-contrib-watch": "~0.6.1"
+		"grunt-contrib-watch": "~0.6.1",
+		"grunt-contrib-requirejs": "~0.4.4"
 	},
 	"repository": {
 		"type": "git",

@@ -21,8 +21,6 @@ define(
             app.factory = $provide.factory;
             app.service = $provide.service;
 
-            $locationProvider.html5Mode(true);
-
             if (config.routes !== undefined) {
                 angular.forEach(config.routes, function (route, path) {
                     $routeProvider.when(
@@ -38,6 +36,8 @@ define(
                 $routeProvider.otherwise(
                     { redirectTo: config.defaultRoutePaths });
             }
+
+            $locationProvider.html5Mode(true);
         } ]);
 
         return app;

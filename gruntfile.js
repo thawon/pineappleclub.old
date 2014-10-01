@@ -14,10 +14,26 @@ module.exports = function (grunt) {
         watch: {
             files: "./app/lesses/*.less",
             tasks: ["less"]
+        },
+        requirejs: {
+            production: {
+                options: {
+                    baseUrl: "./app/scripts",
+                    mainConfigFile: "./app/scripts/main.js",
+                    name: "main",
+                    out: "./app/scripts/optimized.js"
+                }
+            }
         }
     });
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['watch']);
+    grunt.loadNpmTasks("grunt-contrib-less");
+    grunt.loadNpmTasks("grunt-contrib-watch");
+    grunt.loadNpmTasks("grunt-contrib-requirejs");
+
+    //grunt.registerTask("default", ["watch"]);
+
+    grunt.registerTask("development", ["watch"]);
+
+    grunt.registerTask("production", ["requirejs:production"]);
 };

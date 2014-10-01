@@ -3,11 +3,12 @@
     function (app) {
         "use strict";
 
-        app.directive("pcdDeviceHeight", ["ExportService",
-            function (exports) {
-                var directive = {                    
-                        link: function (scope, element, attrs) {
-                            $(element).height($(exports).height());
+        app.directive("pcdPhotoGallery", ["$location",
+            function ($location) {
+                var directive = {
+                    link: function (scope, element, attrs) {
+                        var x;
+                        x = 1;
                     }
                 }
 

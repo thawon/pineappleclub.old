@@ -19,17 +19,15 @@
                     $.proxy(
                         function () {
                             $timeout(
-                                $.proxy(this.resize, this)); }, this), false);
+                                $.proxy(this.resize, this));
+                        }, this), false);
             },
             resize: function () {
                 var sizes = constants.get("device-size"),
                     current = this.device.getDeviceSize();
 
-                if (current === sizes.XS) {
-                    this.$scope.banner = this.IMG_SMALLBANNER;
-                } else {
-                    this.$scope.banner = this.IMG_BIGBANNER;
-                }
+                this.$scope.banner = (current === sizes.XS) ? 
+                                        this.IMG_SMALLBANNER : this.IMG_BIGBANNER;
             }
         });
     });
