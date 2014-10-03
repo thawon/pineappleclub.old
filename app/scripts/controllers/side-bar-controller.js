@@ -27,22 +27,6 @@
                 $scope.project = configuration.project;
                 $scope.menu = navigator.pages.main;
                 $scope.toggleSideBar = $.proxy(this.toggleSideBar, this);
-
-                this.resize();
-
-                exports.addEventListener("resize",
-                    $.proxy(
-                        function () {
-                            $timeout(
-                                $.proxy(this.resize, this));
-                        }, this), false);
-            },
-            resize: function () {
-                var sizes = constants.get("device-size"),
-                    current = this.device.getDeviceSize();
-
-                this.$scope.isSidebarVisible = (current === sizes.XS) ? 
-                                                this.CSS_SIDEBARSHOW : this.CSS_SIDEBARHIDE;
             },
             toggleSideBar: function () {
                 $(this.ELE_SIDEBAR).toggleClass(this.CONS_ACTIVE);

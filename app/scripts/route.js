@@ -7,15 +7,11 @@
                 "/": {                    
                     templateUrl: "views/home.html",
                     dependencies: [
-                        "controllers/home-controller",
                         "controllers/contact/contact-controller"
                     ]
                 },
                 "/photos": {
-                    templateUrl: "views/photo/photo.html",
-                    dependencies: [
-                        "controllers/photo/photo-controller"
-                    ]
+                    templateUrl: "views/photo/photo.html"
                 },
                 "/contactus": {
                     templateUrl: "views/contact/contact-page.html",

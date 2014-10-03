@@ -1,44 +1,24 @@
-﻿// server.js (Express 4.0)
-var express = require("express");
-var morgan = require("morgan");
-var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
-var consolidate = require("consolidate");
-var path = require("path");
-var app = express();
-var port = process.env.PORT || 3000;
+﻿var express = require("express"),
+    morgan = require("morgan"),
+    bodyParser = require("body-parser"),
+    methodOverride = require("method-override"),
+    app = express(),
+    config = require("./config"),
+    routes = require("./routes/index");
 
-app.engine("html", consolidate.jade);
-app.set("view engine", "jade");
-app.set("views", __dirname + "\\app");
+app.engine(config.express.view.engine.type, config.express.view.engine.driver);
+app.set("view engine", config.express.view.engine.type);
+app.set("views", config.express.view.path);
 
-app.use(express.static(__dirname + "/app")); 	// set the static files location /public/img will be /img for users
-app.use(morgan("dev")); 					// log every request to the console
-app.use(bodyParser.urlencoded({ extended: false }))    // parse application/x-www-form-urlencoded
-app.use(bodyParser.json())    // parse application/json
-app.use(methodOverride()); 					// simulate DELETE and PUT
+app.use(express.static(config.express.staticPath));
+app.use(morgan("dev"));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(methodOverride());
 
-// get an instance of router
-var router = express.Router();
+app.use("/", routes);
 
-// catch all route for history
-router.get("*", function (req, res) {
-    var page = { environmentScript: "scripts/main" };
-
-    if (process.env.PORT) {
-        page.environmentScript = "scripts/optimized";
-    }
-
-    res.render("index", { page: page });
+app.listen(config.express.port, function (req, res) {
+    console.log("express is listening on http://" +
+              config.express.ip + ":" + config.express.port);
 });
-
-// about page route (http://localhost:8080/about)
-router.get("/about", function (req, res) {
-    res.send("im the about page!");
-});
-
-// apply the routes to our application
-app.use("/", router);
-
-app.listen(port);
-console.log("Magic happens on port " + port); 
