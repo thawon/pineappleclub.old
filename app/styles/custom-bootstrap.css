@@ -6169,6 +6169,9 @@ button.close {
 .list-no-padding-left {
   padding-left: 0px;
 }
+p {
+  text-align: justify;
+}
 .footer-link {
   font-size: 0.9em;
 }
@@ -6240,4 +6243,8 @@ button.close {
   margin-bottom: 0;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
+}
+.service-table {
+  width: 100%;
+  font-size: small;
 }

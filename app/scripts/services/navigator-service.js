@@ -10,7 +10,7 @@
                         photo: { name: "photos", display: "Photos", path: "/photos" },
                         contact: { name: "contact", display: "Contact Us", path: "/contactus" },
                         staff: { name: "staff", display: "Our Staff", path: "/staff" },
-                        philosophy: { name: "philosophy", display: "Our Philosophy", path: "/philosophy" },
+                        philosophy: { name: "philosophy", display: "Philosophy", path: "/philosophy" },
                         facebook: { name: "facebook", display: "Facebook", path: "" },
                         googlePlus: { name: "google-plus", display: "Google Plus", path: "" }
                     };
@@ -23,6 +23,7 @@
                             items.home,
                             items.services,
                             items.photo,
+                            items.philosophy,
                             items.contact
                         ]
                     },

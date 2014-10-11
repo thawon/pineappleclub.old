@@ -13,6 +13,12 @@
                 "/photos": {
                     templateUrl: "views/photo/photo.html"
                 },
+                "/services": {
+                    templateUrl: "views/services/services.html"
+                },
+                "/philosophy": {
+                    templateUrl: "views/philosophy/philosophy.html"
+                },
                 "/contactus": {
                     templateUrl: "views/contact/contact-page.html",
                     dependencies: [
