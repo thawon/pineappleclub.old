@@ -19,9 +19,21 @@ module.exports = function (grunt) {
             production: {
                 options: {
                     baseUrl: "./app/scripts",
-                    mainConfigFile: "./app/scripts/main.js",
-                    name: "main",
-                    out: "./app/scripts/optimized.js"
+					mainConfigFile: "./app/scripts/main.js",
+					name: "main",
+					include: [
+						"controllers/contact/contact-controller"
+					],
+					out: "./app/scripts/optimized.js",
+					uglify: {
+						except: [
+							"$scope",
+							"$location",
+							"device", 
+							"exports"
+						]
+						//, beautify: true
+					}
                 }
             }
         }
