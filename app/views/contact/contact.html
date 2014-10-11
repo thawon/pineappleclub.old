@@ -14,7 +14,7 @@
                     Phone:                  
                 </td>
                 <td>    
-                    <span ng-bind="companyInfo.contact.phone"></span>
+					<a ng-href="tel:{{item.path}}" ng-bind="companyInfo.contact.phone"></a>
                 </td>
             </tr>
             <tr>
