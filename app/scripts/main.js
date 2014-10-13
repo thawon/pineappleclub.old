@@ -3,10 +3,10 @@ require.config({
         /* vendors */
         angular: "vendors/angular.min",
         ngResource: "vendors/angular-resource.min",
+        ngProgress: "vendors/ngProgress.min",
         jquery: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min",
         underscore: "vendors/underscore-min",
         bootstrap: "vendors/bootstrap.min",
-        ngProgress: "vendors/ngProgress.min",
         async: "vendors/async",
 
         /* services */

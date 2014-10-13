@@ -11,6 +11,7 @@ requirejs.config({
         angular: "app/scripts/vendors/angular.min",
         angularMocks: "app/scripts/vendors/angular-mocks",
         ngResource: "app/scripts/vendors/angular-resource.min",
+        ngProgress: "app/scripts/vendors/ngProgress.min",
         underscore: "app/scripts/vendors/underscore-min",
         jquery: "app/scripts/vendors/jquery",
         domReady: "app/scripts/vendors/domReady",
@@ -28,6 +29,9 @@ requirejs.config({
         ngResource: {
             deps: ["angular"],
             exports: "angular"
+        },
+        ngProgress: {
+            deps: ["angular"]
         },
         angularMocks:
         {

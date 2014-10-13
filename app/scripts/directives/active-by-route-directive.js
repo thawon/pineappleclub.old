@@ -3,7 +3,8 @@
     function (app) {
         "use strict";
 
-        app.directive("pcdActiveByRoute", ["$location", "NavigatorService",
+        app.directive("pcdActiveByRoute", 
+            ["$location", "NavigatorService",
             function ($location, navigator) {
                 var directive = {
                     location: $location,

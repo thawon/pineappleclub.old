@@ -1,11 +1,13 @@
 ﻿define(
     ["app"],
     function (app) {
-        app.controller("ProgressBarController", ["$scope", "ngProgress",
-            function ($scope, ngProgress) {
+        app.controller("ProgressBarController", 
+            ["$scope", "ngProgress", "AppConfigurationService",
+            function ($scope, ngProgress, configuration) {
+                ngProgress.color(configuration.progress.color);
+
                 $scope.$on("$routeChangeStart", function () {
                     ngProgress.start();
-                    //ngProgress.color("#1d9ad9");
                 });
 
                 $scope.$on("$routeChangeSuccess", function () {

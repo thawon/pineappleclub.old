@@ -21,6 +21,10 @@
                     }
                 };
 
+                configuration.progress = {
+                    color: "#1d9ad9"
+                };
+
                 return configuration;
             }
         ]);
