@@ -1,9 +1,9 @@
 define(
-    ["angular", "ngResource", "route", "dependencyResolver"],
-    function (angular, ngResource, config, dependencyResolver) {
+    ["angular", "ngResource", "ngProgress", "route", "dependencyResolver"],
+    function (angular, ngResource, ngProgress, config, dependencyResolver) {
         "use strict";
 
-        var app = angular.module("pineappleclub", ["ngResource"]);
+        var app = angular.module("pineappleclub", ["ngResource", "ngProgress"]);
 
         app.config([
             "$routeProvider",
