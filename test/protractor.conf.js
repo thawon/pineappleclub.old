@@ -8,7 +8,7 @@ exports.config = {
     },
     // A default URL may be passed to Protractor through the baseURL parameter. 
     // That way all calls by Protractor to the browser will use that URL.
-    baseUrl: "http://127.0.0.1:3000/#/",
+    baseUrl: "http://127.0.0.1:3000",
 
     // An array of test files can be sent through the specs parameter for Protractor to execute. 
     // The path of the test files must be relative to the config file.

@@ -14,8 +14,8 @@
         
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li ng-repeat="item in menu.items">
-                    <a ng-href="{{item.path}}" ng-bind="item.display"></a>
+                <li ng-repeat="nav in menu.items">
+                    <a id="nav_{{nav.name}}" ng-href="{{nav.path}}" ng-bind="nav.display"></a>
                 </li>
             </ul>
         </div>
