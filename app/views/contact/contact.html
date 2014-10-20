@@ -33,7 +33,7 @@
                     Email:
                 </td>
                 <td>
-                    <span ng-bind="companyInfo.contact.email"></span>
+                    <a ng-href="mailto:{{companyInfo.contact.email}}" ng-bind="companyInfo.contact.email"></a>
                 </td>
             </tr>
             </tbody>

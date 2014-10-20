@@ -33,7 +33,6 @@
                             display: "About",
                             items: [
                                 items.contact,
-                                items.staff,
                                 items.philosophy
                             ]
                         },
