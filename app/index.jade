@@ -18,20 +18,18 @@ html(lang="en")
           div(ng-include="'/views/navigator.html'")
           div(ng-include="'/views/header.html'")
           div(ng-view)          
-          #cp_widget_6ad5aca0-ee04-48fc-8525-b7b049da1600(pcd-active-by-route, style="display: none;", ng-show="isVisible") ...
+          #cp_widget_8c304cf6-f21f-4ec9-806d-0b00ceef6789(pcd-active-by-route, style="display: none;", ng-show="isVisible") ...
           script(type='text/javascript').
-            var cpo = []; cpo["_object"] = "cp_widget_6ad5aca0-ee04-48fc-8525-b7b049da1600"; cpo["_fid"] = "AIDAh8bXrWqO";
+            var cpo = []; cpo["_object"] ="cp_widget_8c304cf6-f21f-4ec9-806d-0b00ceef6789"; cpo["_fid"] = "AIDAh8bXrWqO";
             var _cpmp = _cpmp || []; _cpmp.push(cpo);
-            (function () {
-              var cp = document.createElement("script"); cp.type = "text/javascript";
-              cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-              var c = document.getElementsByTagName("script")[0];
-              c.parentNode.insertBefore(cp, c);
-            })();
+            (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
+            cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+            var c = document.getElementsByTagName("script")[0];
+            c.parentNode.insertBefore(cp, c); })();
         div(ng-include="'/views/side-bar.html'")
       div(ng-include="'/views/footer.html'")
     div.device-xs.visible-xs
     div.device-sm.visible-sm
     div.device-md.visible-md
     div.device-lg.visible-lg
-    script(src="scripts/vendors/require.js", data-main=page.environmentScript)    
+    script(src="scripts/vendors/require.js", data-main=page.environmentScript)
